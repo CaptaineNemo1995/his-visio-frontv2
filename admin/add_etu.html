@@ -20,9 +20,11 @@
 
 <style>
   body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
 
   .navbar {
     display: flex;
@@ -59,3 +61,134 @@
   }
 </style>
 </head>
+<body>
+<style>
+body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    nav {
+      background: #2d89ef;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #2d89ef;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e5fa8;
+    }
+
+    .password-box {
+      background: #f9f9f9;
+      padding: 10px;
+      border: 1px dashed #aaa;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+  </style>
+
+
+  <div class="container">
+    <h2>Ajouter un étudiant</h2>
+    <form>
+      <label>Matricule</label>
+      <input type="text" placeholder="Matricule" >
+
+      <label>Email</label>
+      <input type="email" placeholder="exemple@mail.com" >
+
+      <label>Nom</label>
+      <input type="text" placeholder="Nom" >
+
+      <label>Prénom</label>
+      <input type="text" placeholder="Prénom" >
+
+      <label>Date de naissance</label>
+      <input type="date" >
+
+      <label>Lieu de naissance</label>
+      <input type="text" placeholder="Ville" >
+
+      <label>Wilaya</label>
+      <select >
+        <option value="">-- Choisir une wilaya --</option>
+        <option>Alger</option>
+        <option>Oran</option>
+        <option>Constantine</option>
+        <option>Blida</option>
+        <option>Annaba</option>
+        <!-- tu peux compléter la liste -->
+      </select>
+
+      <label>Mot de passe généré</label>
+      <div id="passwordBox" class="password-box">Clique sur le bouton ci-dessous</div>
+
+      <button type="button" onclick="generatePassword()">Générer un mot de passe</button>
+      <button type="submit">Ajouter l’étudiant</button>
+
+       <script>
+    function generatePassword() {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$!";
+      let password = "";
+      for (let i = 0; i < 8; i++) {
+        password += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      document.getElementById("passwordBox").innerText = password;
+    }
+  </script>
+    </form>
+  </div>
