@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter les Etudaints</title>
+
+    <nav class="navbar">
+  <div class="logo">⚙️ AdminPanel</div>
+  
+    <ul class="nav-links">
+      <li><a href="dashboard_adm.html">Dashboard</a></li>
+      <li><a href="add_etu.html">Ajouter Étudiant</a></li>
+      <li><a href="event_adm.html">Événements</a></li>
+      <li><a href="chat_adm.html">Canaux</a></li>
+      <li><a href="list_etu.html">Utilisateurs</a></li>
+      <li><a href="../home/home.html">Déconnexion</a></li>
+    </ul>
+</nav>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #8e44ad; /* violet pour distinguer de l’étudiant */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .navbar .logo {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #f1c40f;
+  }
+</style>
+</head>
